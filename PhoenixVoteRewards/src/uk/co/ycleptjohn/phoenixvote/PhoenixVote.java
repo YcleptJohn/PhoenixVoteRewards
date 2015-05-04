@@ -1,10 +1,10 @@
-package uk.co.ycleptjohn.phoenixvotes;
+package uk.co.ycleptjohn.phoenixvote;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class PhoenixVoteRewards extends JavaPlugin {
+public class PhoenixVote extends JavaPlugin {
 	public void onEnable() {
 		
 	}
