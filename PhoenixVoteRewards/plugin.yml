@@ -1,0 +1,21 @@
+name: PhoenixVote
+main: uk.co.ycleptjohn.phoenixvote.PhoenixVote
+version: 0.01
+author: YcleptJohn
+description: Vote shop shit
+commands:
+  votebuy:
+    description: Access all vote related commands
+    usage: /votebuy
+    aliases: [vb, voteb]
+  shop:
+    description: Buy perks with your account balance!
+    usage: /shop
+  vote:
+    description: Retired command; use /shop or /votelinks
+    usage: /vote
+  votelinks:
+    description: Shows the vote links for PhoenixCraft
+    usage: /votelinks
+    aliases: [votelink, votel, vl]
+

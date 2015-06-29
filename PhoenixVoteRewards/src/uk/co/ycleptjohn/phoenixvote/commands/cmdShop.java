@@ -1,15 +1,15 @@
-package uk.co.ycleptjohn.phoenixvote;
+package uk.co.ycleptjohn.phoenixvote.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-public class PhoenixVoteCmds implements CommandExecutor {
+public class cmdShop implements CommandExecutor {
 
 	@Override
-	public boolean onCommand(CommandSender cmdSender, Command cmd, String cmdLabel, String[] args) {
+	public boolean onCommand(CommandSender cmdP, Command cmd, String cmdLbl, String[] args) {
 		// TODO Auto-generated method stub
 		return false;
 	}
-	
+
 }
