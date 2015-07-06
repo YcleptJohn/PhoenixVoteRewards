@@ -18,4 +18,7 @@ commands:
     description: Shows the vote links for PhoenixCraft
     usage: /votelinks
     aliases: [votelink, votel, vl]
+  shopreload:
+    description: reload config
+    usage: /reload
 

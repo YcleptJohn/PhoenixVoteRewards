@@ -5,9 +5,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import uk.co.ycleptjohn.phoenixvote.commands.cmdShop;
-import uk.co.ycleptjohn.phoenixvote.commands.cmdVote;
-import uk.co.ycleptjohn.phoenixvote.commands.cmdVoteLinks;
+import uk.co.ycleptjohn.phoenixvote.commands.*;
 
 public class PhoenixVote extends JavaPlugin implements Listener {
 	public PhoenixVote utilPlugin = null;
@@ -20,7 +18,10 @@ public class PhoenixVote extends JavaPlugin implements Listener {
 		getCommand("shop").setExecutor(new cmdShop());
 		getCommand("vote").setExecutor(new cmdVote());
 		getCommand("votelinks").setExecutor(new cmdVoteLinks());
+		getCommand("shopreload").setExecutor(new cmdReload());
+		
 	}
+	
 	
 	public void onDisable() {
 		plugin = null;
