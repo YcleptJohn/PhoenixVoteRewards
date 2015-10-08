@@ -37,12 +37,11 @@ public class cmdShop implements CommandExecutor, Listener {
 					perkMaterial = Material.getMaterial(plugin.getConfig().getString("store.perks." + currentKey + ".shopIcon"));
 					if (perkMaterial == null) {
 						perkMaterial = Material.RABBIT_FOOT;
-						perk = new ItemStack(perkMaterial);
 					}
 				} else {
 					perkMaterial = Material.RABBIT_FOOT;
-					perk = new ItemStack(perkMaterial);
 				}
+				perk = new ItemStack(perkMaterial);
 				
 				ItemMeta perkMeta = perk.getItemMeta();
 				perkMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("store.perks." + currentKey + ".name")));
@@ -59,6 +58,8 @@ public class cmdShop implements CommandExecutor, Listener {
 				} else {
 					perkLore.add(ChatColor.RED + "Config error");
 				}
+				
+				perkLore.add(ChatColor.BLACK + "" +  plugin.getConfig().getString("store.perks." + currentKey + ".name"));
 				perkMeta.setLore(perkLore);
 				perk.setItemMeta(perkMeta);
 				shopInv.setItem(i, perk);
@@ -71,9 +72,6 @@ public class cmdShop implements CommandExecutor, Listener {
 		} else {
 			//TODO output no-config
 		}
-		
-		
-		
 		
 		return true;
 	}
