@@ -6,6 +6,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import uk.co.ycleptjohn.phoenixvote.commands.*;
+import uk.co.ycleptjohn.phoenixvote.events.InventoryClickEventHandler;
 
 public class PhoenixVote extends JavaPlugin implements Listener {
 	public PhoenixVote utilPlugin = null;
@@ -14,8 +15,8 @@ public class PhoenixVote extends JavaPlugin implements Listener {
 	
 	public void onEnable() {
 		plugin = this;
-		registerEvents(this, new PhoenixVoteEvents());
-		getCommand("shop").setExecutor(new cmdShop());
+		registerEvents(this, new PhoenixVoteEvents(), new InventoryClickEventHandler());
+		getCommand("shop").setExecutor(new cmdShopV2());
 		getCommand("vote").setExecutor(new cmdVote());
 		getCommand("votelinks").setExecutor(new cmdVoteLinks());
 		getCommand("shopreload").setExecutor(new cmdReload());
