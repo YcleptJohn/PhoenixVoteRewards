@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 
 public class Perk {
@@ -72,6 +73,11 @@ public class Perk {
 	public ItemStack getItemStack() {
 		ItemStack is = new ItemStack(getMaterial());
 		return is;
+	}
+	
+	public ItemMeta getItemMeta() {
+		ItemMeta im = getItemStack().getItemMeta();
+		return im;
 	}
 }
 
