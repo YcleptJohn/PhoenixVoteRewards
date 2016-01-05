@@ -21,4 +21,7 @@ commands:
   shopreload:
     description: reload config
     usage: /reload
+  configGEN:
+    description: config tests
+    usage: /configgen
 
