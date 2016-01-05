@@ -3,18 +3,12 @@ package uk.co.ycleptjohn.phoenixvote.configuration;
 import java.io.File;
 
 public class Config {
-	private String name;
 	private File file;
 	private String defaultResourcePath;
 	
-	public Config(String configName, File configFile, String defaultResourcePath) {
-		name = configName;
+	public Config(File configFile, String defaultResourcePath) {
 		file = configFile;
 		this.defaultResourcePath = defaultResourcePath;
-	}
-	
-	public String getName() {
-		return name;
 	}
 	
 	public File getFile() {
