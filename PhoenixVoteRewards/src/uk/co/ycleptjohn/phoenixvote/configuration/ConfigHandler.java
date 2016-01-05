@@ -11,7 +11,7 @@ public class ConfigHandler {
 	private ConfigList configs = new ConfigList();
 	
 	public ConfigHandler() {
-		configs.add("general", new File("general.yml"), "not/sure/yet!");
+		configs.add("general", new Config(new File("general.yml"), "not/sure/yet!"));
 		// Add other configs ofc
 		
 	}

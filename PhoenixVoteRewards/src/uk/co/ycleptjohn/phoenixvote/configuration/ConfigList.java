@@ -1,6 +1,5 @@
 package uk.co.ycleptjohn.phoenixvote.configuration;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,7 +15,7 @@ public class ConfigList {
 		return configs;
 	}
 	
-	public void add(String configName, File configFile, String defaultResourcePath) {
-		
+	public void add(String configName, Config configToAdd) {
+		configs.put(configName, configToAdd);
 	}
 }
