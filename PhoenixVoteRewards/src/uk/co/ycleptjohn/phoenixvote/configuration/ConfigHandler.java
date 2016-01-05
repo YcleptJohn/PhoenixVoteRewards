@@ -8,8 +8,6 @@ import org.bukkit.plugin.Plugin;
 import uk.co.ycleptjohn.phoenixvote.PhoenixVote;
 
 public class ConfigHandler {
-	//private HashMap<String, YamlConfiguration> configs;
-	//private Map<String, List<String>> configs = ConfigList.getConfigMap();
 	private ConfigList configs = new ConfigList();
 	
 	public ConfigHandler() {
