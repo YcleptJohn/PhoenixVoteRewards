@@ -79,16 +79,5 @@ public class Perk {
 		ItemMeta im = getItemStack().getItemMeta();
 		return im;
 	}
+	
 }
-
-
-
-
-
-
-
-
-
-
-
-
