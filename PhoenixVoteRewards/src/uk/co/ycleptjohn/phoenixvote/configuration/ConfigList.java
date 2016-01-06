@@ -11,11 +11,23 @@ public class ConfigList {
 		configs = new HashMap<String, Config>();
 	}
 	
-	public static Map<String, Config> getConfigMap() {
+	public Map<String, Config> getConfigMap() {
 		return configs;
+	}
+	
+	public Config getConfig(String configName) {
+		return configs.get(configName);
 	}
 	
 	public void add(String configName, Config configToAdd) {
 		configs.put(configName, configToAdd);
+	}
+	
+	public void remove(String configName) {
+		
+	}
+	
+	public void clear() {
+		configs = new HashMap<>();
 	}
 }
