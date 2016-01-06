@@ -24,6 +24,10 @@ public class ConfigHandler {
 		}
 	}
 	
+	public void saveConfig(String configToSave) {
+		configs.getConfig(configToSave).save();
+	}
+	
 	public YamlConfiguration getConfig(String configToGet) {
 		return YamlConfiguration.loadConfiguration(configs.getConfig(configToGet).getFile());
 	}
@@ -43,7 +47,6 @@ public class ConfigHandler {
 		
 	}
 	
-	//TODO Get-all methods
 	//TODO Get all config fields based on config name param
 	//TODO flesh out functional methods; save etc
 	
