@@ -25,7 +25,11 @@ public class ConfigHandler {
 	}
 	
 	public YamlConfiguration getConfig(String configToGet) {
-		return YamlConfiguration.loadConfiguration(new File(configs.getConfig(configToGet).getFilePath()));
+		return YamlConfiguration.loadConfiguration(configs.getConfig(configToGet).getFile());
+	}
+	
+	public File getConfigFile(String configToGet) {
+		return configs.getConfig(configToGet).getFile();
 	}
 	
 	
