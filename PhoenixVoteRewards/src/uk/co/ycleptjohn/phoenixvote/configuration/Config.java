@@ -15,6 +15,10 @@ public class Config {
 		return file;
 	}
 	
+	public String getFilePath() {
+		return getFile().toString();
+	}
+	
 	public String getDefaultResourcePath() {
 		return defaultResourcePath;
 	}
