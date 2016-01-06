@@ -24,10 +24,10 @@ public class ConfigList {
 	}
 	
 	public void remove(String configName) {
-		
+		configs.remove(configName);
 	}
 	
 	public void clear() {
-		configs = new HashMap<>();
+		configs.clear();
 	}
 }
