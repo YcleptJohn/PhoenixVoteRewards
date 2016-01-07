@@ -1,30 +1,52 @@
 package uk.co.ycleptjohn.phoenixvote.configuration;
 
 import java.io.File;
+import java.io.IOException;
+
+import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.plugin.Plugin;
+
+import uk.co.ycleptjohn.phoenixvote.PhoenixVote;
 
 public class Config {
 	private File file;
-	private String defaultResourcePath;
+	private YamlConfiguration ymlConfig;
+	private Plugin plugin = PhoenixVote.getPlugin();
+	private String defaultConfigResourcePath;
 	
-	public Config(File configFile, String defaultResourcePath) {
+	public Config(File configFile, String defaultConfigResourcePath) {
 		file = configFile;
-		this.defaultResourcePath = defaultResourcePath;
+		ymlConfig = YamlConfiguration.loadConfiguration(configFile);
+		this.defaultConfigResourcePath = defaultConfigResourcePath;
 	}
 	
 	public File getFile() {
 		return file;
 	}
 	
-	public String getDefaultResourcePath() {
-		return defaultResourcePath;
+	public YamlConfiguration getYamlConfiguration() {
+		return ymlConfig;
+	}
+	
+	
+	public void reset() {
+		generateDefault();
 	}
 	
 	public void save() {
-		//TODO
+		try {
+			ymlConfig.save(file);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
-	public void reset() {
-		//TODO
+	public void generateDefaultIfMissing() {
+		plugin.saveResource(defaultConfigResourcePath, false);
 	}
 	
+	public void generateDefault() {
+		plugin.saveResource(defaultConfigResourcePath, true);
+	}
 }
