@@ -49,14 +49,19 @@ public class ConfigHandler {
 		return configs.getConfigMap();
 	}
 	
-	
 	public void regenerateConfig(String configToReset) {
-		//TODO Selective resets
+		configs.getConfig(configToReset).generateDefault();
 	}
 	
 	public void regenerateAllConfigs() {
 		for(Config c : configs.getConfigMap().values()) {
 			c.generateDefault();
+		}
+	}
+	
+	public void regenerateAllConfigsIfMissing() {
+		for(Config c : configs.getConfigMap().values()) {
+			c.generateDefaultIfMissing();
 		}
 	}
 	
