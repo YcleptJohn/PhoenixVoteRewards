@@ -14,9 +14,9 @@ public class cmdSAVEtest implements CommandExecutor {
 	public boolean onCommand(CommandSender cmdP, Command cmd, String cmdLbl, String[] args) {
 		ConfigHandler cf = new ConfigHandler();
 		for(Config c : cf.getConfigsMap().values()) {
-			c.getYamlConfiguration().createSection(i + "");					System.out.println("l21");
-			c.getYamlConfiguration().createSection((i*2) + "");				System.out.println("l22");
-			c.getYamlConfiguration().set(i + "", "test"); 						System.out.println("l23");
+			c.getYamlConf().createSection(i + "");					System.out.println("l21");
+			c.getYamlConf().createSection((i*2) + "");				System.out.println("l22");
+			c.getYamlConf().set(i + "", "test"); 						System.out.println("l23");
 			c.save();														System.out.println("l24");
 			i++;															System.out.println("l25");
 		}

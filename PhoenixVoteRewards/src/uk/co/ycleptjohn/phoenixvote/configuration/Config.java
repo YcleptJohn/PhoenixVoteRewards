@@ -24,7 +24,7 @@ public class Config {
 		return file;
 	}
 	
-	public YamlConfiguration getYamlConfiguration() {
+	public YamlConfiguration getYamlConf() {
 		return ymlConfig;
 	}
 	
