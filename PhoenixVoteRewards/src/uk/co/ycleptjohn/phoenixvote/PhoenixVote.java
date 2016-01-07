@@ -21,6 +21,7 @@ public class PhoenixVote extends JavaPlugin implements Listener {
 		getCommand("votelinks").setExecutor(new cmdVoteLinks());
 		getCommand("shopreload").setExecutor(new cmdReload());
 		getCommand("configGEN").setExecutor(new cmdGENtest());
+		getCommand("configSAVE").setExecutor(new cmdSAVEtest());
 		
 	}
 	
