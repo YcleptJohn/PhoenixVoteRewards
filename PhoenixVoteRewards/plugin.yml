@@ -24,4 +24,6 @@ commands:
   configGEN:
     description: config tests
     usage: /configgen
-
+  configSAVE:
+    description: config save test
+    usage: /configsave
