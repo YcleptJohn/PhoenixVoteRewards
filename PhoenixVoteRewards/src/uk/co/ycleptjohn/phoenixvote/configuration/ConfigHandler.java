@@ -1,6 +1,8 @@
 package uk.co.ycleptjohn.phoenixvote.configuration;
 
 import java.io.File;
+import java.util.Map;
+
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
@@ -8,9 +10,12 @@ import uk.co.ycleptjohn.phoenixvote.PhoenixVote;
 
 public class ConfigHandler {
 	private ConfigList configs = new ConfigList();
+	private Plugin plugin = PhoenixVote.getPlugin();
 	
 	public ConfigHandler() {
-		configs.add("general", new Config(new File("general.yml"), "not/sure/yet!"));
+		configs.add("general", new Config(new File(plugin.getDataFolder(), "general.yml"), "general.yml"));
+		configs.add("messages", new Config(new File(plugin.getDataFolder(), "messages.yml"), "messages.yml"));
+		configs.add("perks", new Config(new File(plugin.getDataFolder(), "perks.yml"), "perks.yml"));
 		// Add other configs ofc
 		
 	}
@@ -36,15 +41,23 @@ public class ConfigHandler {
 		return configs.getConfig(configToGet).getFile();
 	}
 	
+	public ConfigList getConfigList() {
+		return configs;
+	}
+	
+	public Map<String, Config> getConfigsMap() {
+		return configs.getConfigMap();
+	}
+	
 	
 	public void regenerateConfig(String configToReset) {
 		//TODO Selective resets
 	}
 	
 	public void regenerateAllConfigs() {
-		Plugin p = PhoenixVote.getPlugin();
-		p.saveResource("general.yml", true);
-		
+		for(Config c : configs.getConfigMap().values()) {
+			c.generateDefault();
+		}
 	}
 	
 	//TODO Get all config fields based on config name param
