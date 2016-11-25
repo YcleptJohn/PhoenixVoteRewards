@@ -3,9 +3,10 @@ package uk.co.ycleptjohn.voteshop.commands;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+
 import uk.co.ycleptjohn.voteshop.configuration.Config;
+import uk.co.ycleptjohn.voteshop.configuration.ConfigFile;
 import uk.co.ycleptjohn.voteshop.configuration.ConfigHandler;
-import uk.co.ycleptjohn.voteshop.configuration.Configs;
 
 public class cmdGENtest implements CommandExecutor {
 
@@ -15,14 +16,10 @@ public class cmdGENtest implements CommandExecutor {
 		//cf.regenerateAllConfigs();
 		ch.regenerateAllConfigsIfMissing();
 		
-		Config perks = ch.get(Configs.GENERAL);
+		ConfigFile perks = ch.get(Config.PERKS);
 		perks.test();
 		
 		//yml.createSection("name.test.p");
-		
-		
-		
-		
 		
 		return true;
 	}
