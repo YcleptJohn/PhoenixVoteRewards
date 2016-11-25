@@ -1,6 +1,6 @@
-name: PhoenixVote
-main: uk.co.ycleptjohn.phoenixvote.PhoenixVote
-version: 0.01
+name: VoteShop
+main: uk.co.ycleptjohn.voteshop.VoteShop
+version: 1
 author: YcleptJohn
 description: Vote shop shit
 commands:
