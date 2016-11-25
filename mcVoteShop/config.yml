@@ -1,0 +1,13 @@
+store:
+  perks:
+    example1:
+      name: '&cPerk1'
+      cost: 50
+      description: '&athis item...'
+      shopIcon: 'GRASS'
+    example2:
+      name: '&aPerk2'
+      cost: 25
+      description: '&dthis item...'
+      shopIcon: 'DIAMOND_CHESTPLATE'
+      
