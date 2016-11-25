@@ -6,11 +6,11 @@ import java.util.Map;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
-import uk.co.ycleptjohn.voteshop.PhoenixVote;
+import uk.co.ycleptjohn.voteshop.VoteShop;
 
 public class ConfigHandler {
 	private ConfigList configs = new ConfigList();
-	private Plugin plugin = PhoenixVote.getPlugin();
+	private Plugin plugin = VoteShop.getPlugin();
 	
 	public ConfigHandler() {
 		configs.add("general", new Config(new File(plugin.getDataFolder(), "general.yml"), "general.yml"));

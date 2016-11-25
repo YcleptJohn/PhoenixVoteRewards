@@ -4,7 +4,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-public class PhoenixVoteCmds implements CommandExecutor {
+public class VoteShopCmds implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender cmdSender, Command cmd, String cmdLabel, String[] args) {

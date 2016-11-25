@@ -16,13 +16,13 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 
-import uk.co.ycleptjohn.voteshop.PhoenixVote;
+import uk.co.ycleptjohn.voteshop.VoteShop;
 
 public class cmdShop implements CommandExecutor, Listener {
 
 	@Override
 	public boolean onCommand(CommandSender cmdP, Command cmd, String cmdLbl, String[] args) {
-		Plugin plugin = PhoenixVote.getPlugin();
+		Plugin plugin = VoteShop.getPlugin();
 		Player player = (Player) cmdP;
 		if (plugin.getConfig().getConfigurationSection("store.perks") != null) {
 			int perkKeys = plugin.getConfig().getConfigurationSection("store.perks").getKeys(false).size();

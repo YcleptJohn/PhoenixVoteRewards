@@ -16,10 +16,10 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 
 import uk.co.ycleptjohn.voteshop.Perk;
-import uk.co.ycleptjohn.voteshop.PhoenixVote;
+import uk.co.ycleptjohn.voteshop.VoteShop;
 
 public class cmdShopV2 implements CommandExecutor, Listener {
-	Plugin plugin = PhoenixVote.getPlugin();
+	Plugin plugin = VoteShop.getPlugin();
 	
 	@Override
 	public boolean onCommand(CommandSender cmdP, Command cmd, String cmdLbl, String[] args) {

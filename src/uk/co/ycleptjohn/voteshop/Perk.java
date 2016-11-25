@@ -8,7 +8,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 
 public class Perk {
-	Plugin plugin = PhoenixVote.getPlugin();
+	Plugin plugin = VoteShop.getPlugin();
 	private String name;
 	private String nameColours;
 	private int cost;

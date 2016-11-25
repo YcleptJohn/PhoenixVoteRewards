@@ -9,10 +9,10 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 
 import uk.co.ycleptjohn.voteshop.Perk;
-import uk.co.ycleptjohn.voteshop.PhoenixVote;
+import uk.co.ycleptjohn.voteshop.VoteShop;
 
 public class InventoryClickEventHandler implements Listener {
-	Plugin plugin = PhoenixVote.getPlugin();
+	Plugin plugin = VoteShop.getPlugin();
 	
 	@EventHandler
 	public void onInventoryClickEvent(InventoryClickEvent e) {

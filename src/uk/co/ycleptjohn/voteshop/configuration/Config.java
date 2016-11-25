@@ -6,12 +6,12 @@ import java.io.IOException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
-import uk.co.ycleptjohn.voteshop.PhoenixVote;
+import uk.co.ycleptjohn.voteshop.VoteShop;
 
 public class Config {
 	private File file;
 	private YamlConfiguration ymlConfig;
-	private Plugin plugin = PhoenixVote.getPlugin();
+	private Plugin plugin = VoteShop.getPlugin();
 	private String defaultConfigResourcePath;
 	
 	public Config(File configFile, String defaultConfigResourcePath) {

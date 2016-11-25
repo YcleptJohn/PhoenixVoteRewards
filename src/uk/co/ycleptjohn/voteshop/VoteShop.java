@@ -8,14 +8,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 import uk.co.ycleptjohn.voteshop.commands.*;
 import uk.co.ycleptjohn.voteshop.events.InventoryClickEventHandler;
 
-public class PhoenixVote extends JavaPlugin implements Listener {
-	public PhoenixVote utilPlugin = null;
+public class VoteShop extends JavaPlugin implements Listener {
+	public VoteShop utilPlugin = null;
 	
 	private static Plugin plugin;
 	
 	public void onEnable() {
 		plugin = this;
-		registerEvents(this, new PhoenixVoteEvents(), new InventoryClickEventHandler());
+		registerEvents(this, new VoteShopEvents(), new InventoryClickEventHandler());
 		getCommand("shop").setExecutor(new cmdShopV2());
 		getCommand("vote").setExecutor(new cmdVote());
 		getCommand("votelinks").setExecutor(new cmdVoteLinks());
