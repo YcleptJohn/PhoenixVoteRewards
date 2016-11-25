@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
+@Deprecated
 public class ConfigList {
 	private static Map<String, Config> configs;
 	//String = config name; Config = config object;
@@ -21,7 +22,7 @@ public class ConfigList {
 		return configs.get(configName);
 	}
 	
-	public Config getConfig(Configs config) {
+	public Config getConfig(Config config) {
 		return configs.get(config.getName());
 	}
 	
