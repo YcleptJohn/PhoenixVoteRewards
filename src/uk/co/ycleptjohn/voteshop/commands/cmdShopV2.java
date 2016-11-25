@@ -1,4 +1,4 @@
-package uk.co.ycleptjohn.phoenixvote.commands;
+package uk.co.ycleptjohn.voteshop.commands;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,8 +15,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 
-import uk.co.ycleptjohn.phoenixvote.Perk;
-import uk.co.ycleptjohn.phoenixvote.PhoenixVote;
+import uk.co.ycleptjohn.voteshop.Perk;
+import uk.co.ycleptjohn.voteshop.PhoenixVote;
 
 public class cmdShopV2 implements CommandExecutor, Listener {
 	Plugin plugin = PhoenixVote.getPlugin();

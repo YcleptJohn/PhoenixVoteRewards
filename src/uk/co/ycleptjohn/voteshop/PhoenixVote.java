@@ -1,12 +1,12 @@
-package uk.co.ycleptjohn.phoenixvote;
+package uk.co.ycleptjohn.voteshop;
 
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import uk.co.ycleptjohn.phoenixvote.commands.*;
-import uk.co.ycleptjohn.phoenixvote.events.InventoryClickEventHandler;
+import uk.co.ycleptjohn.voteshop.commands.*;
+import uk.co.ycleptjohn.voteshop.events.InventoryClickEventHandler;
 
 public class PhoenixVote extends JavaPlugin implements Listener {
 	public PhoenixVote utilPlugin = null;

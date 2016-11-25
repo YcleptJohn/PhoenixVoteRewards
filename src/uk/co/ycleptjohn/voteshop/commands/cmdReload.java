@@ -1,10 +1,10 @@
-package uk.co.ycleptjohn.phoenixvote.commands;
+package uk.co.ycleptjohn.voteshop.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-import uk.co.ycleptjohn.phoenixvote.PhoenixVote;
+import uk.co.ycleptjohn.voteshop.PhoenixVote;
 
 public class cmdReload implements CommandExecutor {
 

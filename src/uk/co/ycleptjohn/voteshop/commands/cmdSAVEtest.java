@@ -1,10 +1,11 @@
-package uk.co.ycleptjohn.phoenixvote.commands;
+package uk.co.ycleptjohn.voteshop.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import uk.co.ycleptjohn.phoenixvote.configuration.Config;
-import uk.co.ycleptjohn.phoenixvote.configuration.ConfigHandler;
+
+import uk.co.ycleptjohn.voteshop.configuration.Config;
+import uk.co.ycleptjohn.voteshop.configuration.ConfigHandler;
 
 public class cmdSAVEtest implements CommandExecutor {
 	

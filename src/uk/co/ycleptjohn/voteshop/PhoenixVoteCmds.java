@@ -1,4 +1,4 @@
-package uk.co.ycleptjohn.phoenixvote;
+package uk.co.ycleptjohn.voteshop;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

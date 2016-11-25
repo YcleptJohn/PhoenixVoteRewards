@@ -1,4 +1,4 @@
-package uk.co.ycleptjohn.phoenixvote.configuration;
+package uk.co.ycleptjohn.voteshop.configuration;
 
 import java.util.HashMap;
 import java.util.Map;

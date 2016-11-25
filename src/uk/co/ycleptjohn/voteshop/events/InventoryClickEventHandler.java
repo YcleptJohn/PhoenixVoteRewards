@@ -1,4 +1,4 @@
-package uk.co.ycleptjohn.phoenixvote.events;
+package uk.co.ycleptjohn.voteshop.events;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -8,8 +8,8 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 
-import uk.co.ycleptjohn.phoenixvote.Perk;
-import uk.co.ycleptjohn.phoenixvote.PhoenixVote;
+import uk.co.ycleptjohn.voteshop.Perk;
+import uk.co.ycleptjohn.voteshop.PhoenixVote;
 
 public class InventoryClickEventHandler implements Listener {
 	Plugin plugin = PhoenixVote.getPlugin();

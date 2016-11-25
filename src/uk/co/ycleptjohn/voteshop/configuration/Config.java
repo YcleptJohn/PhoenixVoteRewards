@@ -1,4 +1,4 @@
-package uk.co.ycleptjohn.phoenixvote.configuration;
+package uk.co.ycleptjohn.voteshop.configuration;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
-import uk.co.ycleptjohn.phoenixvote.PhoenixVote;
+import uk.co.ycleptjohn.voteshop.PhoenixVote;
 
 public class Config {
 	private File file;
