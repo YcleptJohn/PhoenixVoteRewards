@@ -3,7 +3,6 @@ package uk.co.ycleptjohn.voteshop.configuration;
 import java.io.File;
 import java.util.Map;
 
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
 import uk.co.ycleptjohn.voteshop.VoteShop;
@@ -16,20 +15,28 @@ public class ConfigHandler {
 		configs.add("general", new Config(new File(plugin.getDataFolder(), "general.yml"), "general.yml"));
 		configs.add("messages", new Config(new File(plugin.getDataFolder(), "messages.yml"), "messages.yml"));
 		configs.add("perks", new Config(new File(plugin.getDataFolder(), "perks.yml"), "perks.yml"));
-		// Add other configs ofc
+	}
+	
+	/**
+	 * Gets a config from the current list
+	 * @param configToGet config name to retrieve
+	 * @return Config obj of this config or null if it doesn't exist
+	 */
+	public Config get(Configs config) {
+		return configs.getConfig(config);
 		
 	}
 	
-	public Config getConfig(String configToGet) {
-		return configs.getConfig(configToGet);
-	}
-	
-	public File getConfigFile(String configToGet) {
+	public File getFile(String configToGet) {
 		return configs.getConfig(configToGet).getFile();
 	}
 	
 	public ConfigList getConfigList() {
 		return configs;
+	}
+	
+	public String getConfigListAsString() {
+		return configs.toString();
 	}
 	
 	public Map<String, Config> getConfigsMap() {
