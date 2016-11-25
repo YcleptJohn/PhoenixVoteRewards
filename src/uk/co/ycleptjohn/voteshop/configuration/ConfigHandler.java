@@ -20,21 +20,8 @@ public class ConfigHandler {
 		
 	}
 	
-	/**
-	 * Saves config files - Or generates if non-existant
-	 */
-	public void saveConfigs() {
-		for(Config c : configs.getConfigMap().values()) {
-			c.save();
-		}
-	}
-	
-	public void saveConfig(String configToSave) {
-		configs.getConfig(configToSave).save();
-	}
-	
-	public YamlConfiguration getConfig(String configToGet) {
-		return YamlConfiguration.loadConfiguration(configs.getConfig(configToGet).getFile());
+	public Config getConfig(String configToGet) {
+		return configs.getConfig(configToGet);
 	}
 	
 	public File getConfigFile(String configToGet) {
