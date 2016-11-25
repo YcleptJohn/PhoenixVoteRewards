@@ -1,7 +1,9 @@
 package uk.co.ycleptjohn.voteshop.configuration;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class ConfigList {
 	private static Map<String, Config> configs;
@@ -19,6 +21,10 @@ public class ConfigList {
 		return configs.get(configName);
 	}
 	
+	public Config getConfig(Configs config) {
+		return configs.get(config.getName());
+	}
+	
 	public void add(String configName, Config configToAdd) {
 		configs.put(configName, configToAdd);
 	}
@@ -29,5 +35,21 @@ public class ConfigList {
 	
 	public void clear() {
 		configs.clear();
+	}
+	
+	public String toString() {
+		Iterator<Entry<String, Config>> it = configs.entrySet().iterator();
+		String resultString = "{";
+		while(it.hasNext()) {
+			Map.Entry<String, Config> pair = it.next();
+			resultString += pair.getKey();
+			resultString += ":";
+			resultString += pair.getValue();
+			if(it.hasNext()) {
+				resultString += ", ";
+			}
+		}
+		resultString += "}";
+		return resultString;
 	}
 }
