@@ -11,15 +11,13 @@ import uk.co.ycleptjohn.voteshop.VoteShop;
 
 public class Config extends YamlConfiguration {
 	private File file;
-	private YamlConfiguration ymlConfig;
 	private Plugin plugin = VoteShop.getPlugin();
 	private String defaultConfigResourcePath;
 	
 	public Config(File configFile, String defaultConfigResourcePath) {
 		file = configFile;
-		ymlConfig = new YamlConfiguration();
 		try {
-			ymlConfig.load(file);
+			this.load(getFile());
 		} catch (IOException | InvalidConfigurationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -32,10 +30,10 @@ public class Config extends YamlConfiguration {
 		return file;
 	}
 	
-	public YamlConfiguration getYamlConf() {
-		return ymlConfig;
-	}
 	
+	public void test() {
+		System.out.println(this.get("name"));
+	}
 	
 	public void reset() {
 		generateDefault();
