@@ -1,6 +1,10 @@
 package uk.co.ycleptjohn.voteshop.configuration;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.bukkit.configuration.InvalidConfigurationException;
 
 public class ConfigHandler {
 	//private Plugin plugin = VoteShop.getPlugin();
@@ -29,7 +33,15 @@ public class ConfigHandler {
 	
 	public void regenerateAllConfigsIfMissing() {
 		for(Config c : Config.values()) {
-			c.getConfigFile().generateDefault();
+			ConfigFile cf = c.getConfigFile();
+			try {
+				cf.load(cf.getFile());
+			} catch (FileNotFoundException e) {
+				c.getConfigFile().generateDefault();
+			} catch (InvalidConfigurationException | IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 	
