@@ -17,7 +17,13 @@ public class cmdGENtest implements CommandExecutor {
 		ch.regenerateAllConfigsIfMissing();
 		
 		ConfigFile perks = ch.get(Config.PERKS);
-		perks.test();
+		System.out.println(perks.toString());
+		System.out.println(perks.contains("name"));
+		System.out.println(perks.get("name"));
+		System.out.println(perks);
+		System.out.println(perks.getCurrentPath());
+		
+		
 		
 		//yml.createSection("name.test.p");
 		
