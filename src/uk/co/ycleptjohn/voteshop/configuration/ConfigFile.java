@@ -1,6 +1,7 @@
 package uk.co.ycleptjohn.voteshop.configuration;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -16,13 +17,16 @@ public class ConfigFile extends YamlConfiguration {
 	
 	public ConfigFile(File configFile, String defaultConfigResourcePath) {
 		file = configFile;
+		this.defaultConfigResourcePath = defaultConfigResourcePath;
 		try {
 			this.load(getFile());
-		} catch (IOException | InvalidConfigurationException e) {
+		} catch (FileNotFoundException e) {
+			generateDefault();
+		}
+		catch (IOException | InvalidConfigurationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		this.defaultConfigResourcePath = defaultConfigResourcePath;
 	}
 	
 	public File getFile() {
