@@ -22,7 +22,6 @@ public class ConfigFile extends YamlConfiguration {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		this.defaultConfigResourcePath = defaultConfigResourcePath;
 	}
 	
@@ -30,10 +29,6 @@ public class ConfigFile extends YamlConfiguration {
 		return file;
 	}
 	
-
-	public void test() {
-		System.out.println(this.get("name"));
-	}
 	
 	public void reset() {
 		generateDefault();
